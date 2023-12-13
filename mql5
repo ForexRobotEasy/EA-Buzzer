@@ -1,0 +1,82 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                             EA Buzzer             |
+//|                                Developed by Forex Robot Easy Team |
+//|                                http://www.forexroboteasy.com      |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//| Global variables                                                  |
+//+------------------------------------------------------------------+
+bool openNewSeries = true;  // Enable/disable the opening of another series of orders
+bool tradeBuy = true;  // Enable buying in the market
+bool tradeSell = true;  // Enable selling in the market
+bool manageManualOrders = true;  // Enable EA Buzzer to manage manual orders
+
+//+------------------------------------------------------------------+
+//| Opening new series of orders                                      |
+//+------------------------------------------------------------------+
+void OpenNewSeries()
+{
+    // Your code for opening new series of orders goes here
+}
+
+//+------------------------------------------------------------------+
+//| Trading function for buying or selling                            |
+//+------------------------------------------------------------------+
+void Trade()
+{
+    if (tradeBuy)
+    {
+        // Your code for buying goes here
+    }
+    if (tradeSell)
+    {
+        // Your code for selling goes here
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Managing manual orders                                            |
+//+------------------------------------------------------------------+
+void ManageManualOrders()
+{
+    if (manageManualOrders)
+    {
+        // Your code for managing manual orders goes here
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor start function                                     |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Initialization code goes here
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor tick function                                      |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    if (openNewSeries)
+    {
+        OpenNewSeries();
+    }
+
+    Trade();
+
+    ManageManualOrders();
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor deinitialization function                          |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Deinitialization code goes here
+}
+
+//+------------------------------------------------------------------+
